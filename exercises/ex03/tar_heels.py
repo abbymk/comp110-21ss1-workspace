@@ -6,7 +6,7 @@ __author__ = "730230918"
 # Begin your solution here...
 
 from random import randint
-Number: int= int(input("Enter an int:")) 
+Number: int = int(input("Enter an int:")) 
 some_int: int = randint(0, 1000)
 b: bool = Number % 2 == 0
 a: bool = Number % 7 == 0
