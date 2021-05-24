@@ -17,27 +17,30 @@ from datetime import datetime
 from datetime import timedelta
 today: datetime = datetime.today()
 
-fortnight: timedelta = timedelta(7+7)
-mini_month: timedelta = timedelta (5+5+5)
+fortnight: timedelta = timedelta(7 + 7)
+mini_month: timedelta = timedelta(24 + 1)
 future: datetime = today + mini_month
+over_a_year: timedelta = timedelta(374 + 1)
+future_1: datetime = today + over_a_year
 
+future_2: datetime = today + fortnight
 
 
 # Begin your solution here...
-people_pop: str = input ( " Population: " )
+people_pop: str = input(" Population: ")
 people_pop_int: int = int(people_pop)
 
-dose_administered: str = input ( " Doses administered: " )
+dose_administered: str = input(" Doses administered: ")
 dose_administered_int: int = int(dose_administered)
 
-dose_per_day: str = input ( " Doses per day: " )
+dose_per_day: str = input(" Doses per day: ")
 dose_per_day_int: int = int(dose_per_day)
 
-target_percent: str = input ( "Target percent vaccinated: " )
+target_percent: str = input(" Target percent vaccinated: ")
 target_percent_int: int = int(target_percent)
 target_percent_float: float = float(target_percent_int)
-target_percent_int: int = round(target_percent_float)
+target_percent_int_1: int = round(target_percent_float)
 
-
-
-print("We will reach " + target_percent + "% vaccination in 25 days, which falls on " + future.strftime("%B %d, %Y") + ". " )
+print("We will reach " + target_percent + "% vaccination in 25 days, which falls on " + future.strftime("%B %d, %Y") + ". ")
+print("We will reach " + target_percent + "% vaccination in 375 days, which falls on " + future_1.strftime("%B %d, %Y") + ". ")
+print("We will reach " + target_percent + "% vaccination in 14 days, which falls on " + future_2.strftime("%B %d, %Y") + ". ")
